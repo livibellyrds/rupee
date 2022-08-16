@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+    <h2 class="card-title">
+        <%= @project.title %>
+    </h2>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @project.user.email %></h6>
+
+    <p class="card-text">
+        <%= @project.description %>
+    </p>
+    <% if user_signed_in? && @project.user.email == current_user.email%>
+        <%= link_to 'Edit this project', edit_project_path(@project), class:"btn btn-success mt-2" %>
+    </div>
+</div>
+    <%= button_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger mt-2" %>
+    <% else %>
+     </div>
+</div>   
+    <% end %>
+    <%= link_to 'Back to projects', projects_path, class:"btn btn-dark mt-2" %>

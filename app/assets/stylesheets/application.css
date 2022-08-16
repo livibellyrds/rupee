@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+h1{
+    color: #198754;
+
+}
+.btn:hover {
+    color: white;
+    background-color: #198754;
+    border-color: #198754;
+  }
+
+#userEmail{
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+}
+
+.card-header {
+    color: #198754;
+}
+
+.card-text {
+    font-size: 0.8rem;
+}
+
+footer {
+    color: #198754;
+    text-align: center;
+    bottom: 0;
+}
+  
+footer li {
+    display: block;
+
+}
